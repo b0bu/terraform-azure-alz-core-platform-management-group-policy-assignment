@@ -1,5 +1,5 @@
 // these policies can remediate and therefore require a managed identity
-resource "azurerm_management_group_policy_assignment" "assignments" {
+resource "azurerm_management_group_policy_assignment" "assignment" {
   name                 = var.name
   policy_definition_id = var.policy_id
   management_group_id  = var.management_group_id
