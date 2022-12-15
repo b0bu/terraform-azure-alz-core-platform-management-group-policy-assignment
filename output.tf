@@ -1,4 +1,7 @@
-// output identity id after creation?
-output "identity" {
-  value = azurerm_management_group_policy_assignment.assignment.identity
+// can't index .identity here as not all assignments will have contents
+output "assignment" {
+  value = {
+    name = azurerm_management_group_policy_assignment.assignment.name
+    identity = azurerm_management_group_policy_assignment.assignment.identity
+  }
 }
