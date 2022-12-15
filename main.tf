@@ -6,7 +6,10 @@ resource "azurerm_management_group_policy_assignment" "assignments" {
   parameters           = var.parameters
 
   location = "uksouth"
-  identity {
+  dynamic identity {
+    for_each = var.managed_identity == true ? [1] : []
+    content {
     type = "SystemAssigned"
+    }
   }
 }

@@ -18,3 +18,9 @@ variable "name" {
   type        = string
   description = "The assignment name (note this can be the same or different from the policy name) "
 }
+
+variable "managed_identity" {
+  type = bool
+  default = false
+  description = "Create a policy assignment with a managed identity"
+}
