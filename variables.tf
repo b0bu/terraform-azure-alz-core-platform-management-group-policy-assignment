@@ -6,7 +6,7 @@ variable "management_group_id" {
 variable "parameters" {
   type        = string
   description = "Json encoded map of parameter values used to template the policy at assignment"
-  default = "{}"
+  default     = "{}"
 }
 
 variable "policy_id" {
@@ -20,7 +20,17 @@ variable "name" {
 }
 
 variable "managed_identity" {
-  type = bool
-  default = false
+  type        = bool
+  default     = false
   description = "Create a policy assignment with a managed identity"
+}
+
+variable "description" {
+  type        = string
+  description = "A policy description displayed in the portal at assignment time"
+}
+
+variable "display_name" {
+  type        = string
+  description = "A name displayed in the portal at assignment time"
 }
