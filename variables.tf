@@ -6,7 +6,7 @@ variable "management_group_id" {
 variable "parameters" {
   type        = string
   description = "Json encoded map of parameter values used to template the policy at assignment"
-  default     = "{}"
+  default     = null
 }
 
 variable "policy_id" {
